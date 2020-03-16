@@ -4,7 +4,7 @@
 ## Author: Shadowed, Aviana
 ## Version: Backport v.01 from v3.2.12-5-g3fb7edd
 ## SavedVariables: ShadowedUFDB
-## OptionalDeps: Ace3, LibSharedMedia-3.0, LibHealComm-3.0, AceGUI-3.0-SharedMediaWidgets, LibBanzai-2.0
+## OptionalDeps: Ace3, MobHealth, LibSharedMedia-3.0, LibHealComm-3.0, AceGUI-3.0-SharedMediaWidgets, LibBanzai-2.0
 ## X-GitHub-Url: https://github.com/Aviana/ShadowedUnitFrames
 
 libs\LibStub\LibStub.lua

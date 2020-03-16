@@ -483,6 +483,13 @@ Tags.defaultTags = {
 		return ShadowUF:FormatLargeNumber(UnitMana(unit))
 	end]],
 	["curmaxhp"] = [[function(unit, unitOwner)
+		if MobHealth_GetTargetCurHP and MobHealth_GetTargetMaxHP then
+				local curr = MobHealth_GetTargetCurHP()
+				local max = MobHealth_GetTargetMaxHP()
+				if curr and max then
+					return string.format("%s/%s", ShadowUF:FormatLargeNumber(curr), ShadowUF:FormatLargeNumber(max))
+				end
+			end
 		if( UnitIsDead(unit) ) then
 			return ShadowUF.L["Dead"]
 		elseif( UnitIsGhost(unit) ) then
