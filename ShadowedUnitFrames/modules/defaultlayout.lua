@@ -428,6 +428,7 @@ function ShadowUF:LoadDefaultLayout(useMerge)
 			castBar = {order = 60},
 			comboPoints = {anchorTo = "$parent", order = 60, anchorPoint = "BR", x = -3, y = 8, size = 14, spacing = -4, growth = "LEFT", isBar = true},
 			indicators = {
+				elite = {anchorTo = "$parent", anchorPoint = "TR", size = 78, x = 17, y = -61},
 			},
 			incHeal = {enabled = false, cap = 1},
 			auras = {

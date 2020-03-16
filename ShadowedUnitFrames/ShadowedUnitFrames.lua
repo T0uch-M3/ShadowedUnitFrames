@@ -265,6 +265,7 @@ function ShadowUF:LoadUnitDefaults()
 	self.defaults.profile.units.focustarget.fader = {enabled = false, combatAlpha = 1.0, inactiveAlpha = 0.60}
 	-- TARGET
 	self.defaults.profile.units.target.enabled = true
+	self.defaults.profile.units.target.indicators.elite = {enabled = true, size = 78, anchorPoint = "TR", anchorTo = "$parent", x = 17, y = -61}
 	self.defaults.profile.units.target.comboPoints = {enabled = true, isBar = false, height = 0.40, order = 30, anchorTo = "$parent", anchorPoint = "BR", x = 0, y = 0}
 	self.defaults.profile.units.target.incHeal = {enabled = false, cap = 1}
 	-- TARGETTARGET/TARGETTARGETTARGET

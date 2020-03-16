@@ -1,4 +1,4 @@
-local Indicators = {list = {"status", "pvp", "leader", "masterLoot", "raidTarget", "happiness", "ready", "role", "class"}}
+local Indicators = {list = {"status", "elite", "pvp", "leader", "masterLoot", "raidTarget", "happiness", "ready", "role", "class"}}
 local leavingWorld
 
 ShadowUF:RegisterModule(Indicators, "indicators", ShadowUF.L["Indicators"])
@@ -88,6 +88,21 @@ function Indicators:UpdateLeader(frame)
 		frame.indicators.leader:Show()
 	else
 		frame.indicators.leader:Hide()
+	end
+end
+
+function Indicators:UpdateElite(frame)
+	if( not frame.indicators.elite or not frame.indicators.elite.enabled ) then return end
+	
+	local classif = UnitClassification(frame.unit)
+	if( classif == "rare" ) then
+		frame.indicators.elite:SetTexture("Interface\\AddOns\\ShadowedUnitFrames\\media\\textures\\UI-DialogBox-Silver-Dragon-right")
+		frame.indicators.elite:Show()
+	elseif classif == "normal" then
+		frame.indicators.elite:Hide()
+	else
+		frame.indicators.elite:SetTexture("Interface\\AddOns\\ShadowedUnitFrames\\media\\textures\\UI-DialogBox-Gold-Dragon-right")
+		frame.indicators.elite:Show()
 	end
 end
 
@@ -257,6 +272,12 @@ function Indicators:OnEnable(frame)
 
 		frame.indicators.leader = frame.indicators.leader or frame.indicators:CreateTexture(nil, "OVERLAY")
 		frame.indicators.leader:SetTexture("Interface\\GroupFrame\\UI-Group-LeaderIcon")
+	end
+	
+	if( config.indicators.elite and config.indicators.elite.enabled ) then
+		frame:RegisterUnitEvent("UNIT_CLASSIFICATION_CHANGED", self, "UpdateElite")
+		frame:RegisterUpdateFunc(self, "UpdateElite")
+		frame.indicators.elite = frame.indicators.elite or frame.indicators:CreateTexture(nil, "ARTWORK")
 	end
 		
 	if( config.indicators.masterLoot and config.indicators.masterLoot.enabled ) then
