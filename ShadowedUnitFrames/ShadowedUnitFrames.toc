@@ -1,0 +1,49 @@
+## Interface: 20400
+## Title: Shadowed Unit Frames
+## Notes: An apple a day keeps the raptor away, or so they say
+## Author: Shadowed, Aviana
+## Version: Backport v.01 from v3.2.12-5-g3fb7edd
+## SavedVariables: ShadowedUFDB
+## OptionalDeps: Ace3, LibSharedMedia-3.0, LibHealComm-3.0, AceGUI-3.0-SharedMediaWidgets, LibBanzai-2.0
+## X-GitHub-Url: https://github.com/Aviana/ShadowedUnitFrames
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+libs\LibHealComm-3.0\lib.xml
+libs\LibDruidMana-1.0\LibDruidMana-1.0.lua
+libs\LibBanzai-2.0\LibBanzai-2.0.lua
+libs\AceDB-3.0\AceDB-3.0.lua
+
+localization\enUS.lua
+localization\deDE.lua
+localization\esES.lua
+localization\esMX.lua
+localization\frFR.lua
+localization\koKR.lua
+localization\ruRU.lua
+localization\zhCN.lua
+localization\zhTW.lua
+
+ShadowedUnitFrames.lua
+modules\units.lua
+modules\layout.lua
+modules\movers.lua
+modules\defaultlayout.lua
+modules\highlight.lua
+modules\tags.lua
+modules\health.lua
+modules\power.lua
+modules\portrait.lua
+modules\indicators.lua
+modules\xp.lua
+modules\cast.lua
+modules\auras.lua
+modules\combattext.lua
+modules\totems.lua
+modules\fader.lua
+modules\combopoints.lua
+modules\incheal.lua
+modules\range.lua
+modules\empty.lua
+modules\druid.lua

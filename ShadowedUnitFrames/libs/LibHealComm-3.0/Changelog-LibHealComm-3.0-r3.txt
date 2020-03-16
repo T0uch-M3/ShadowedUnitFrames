@@ -1,0 +1,28 @@
+------------------------------------------------------------------------
+r3 | nevcairiel | 2008-10-09 21:52:54 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/LibHealComm-3.0.lua
+
+WoWAce Post-Processing: Virtually inflate Library Revision numbers for proper upgrade path
+------------------------------------------------------------------------
+r2 | root | 2008-09-29 21:43:16 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r1 | root | 2008-09-29 21:19:02 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /branches
+   A /tags
+   A /trunk
+   A /trunk/CallbackHandler-1.0
+   A /trunk/CallbackHandler-1.0/CallbackHandler-1.0.lua
+   A /trunk/LibHealComm-3.0.lua
+   A /trunk/LibHealComm-3.0.toc
+   A /trunk/LibStub
+   A /trunk/LibStub/LibStub.lua
+   A /trunk/lib.xml
+
+Initial import of HEAD
+------------------------------------------------------------------------

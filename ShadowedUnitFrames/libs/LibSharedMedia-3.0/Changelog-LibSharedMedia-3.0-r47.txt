@@ -1,0 +1,39 @@
+------------------------------------------------------------------------
+r47 | nevcairiel | 2008-10-12 11:40:04 +0000 (Sun, 12 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/LibSharedMedia-3.0.toc
+
+Patch 3.0 prep: Remove LoD from Libraries that have no load manager (LoD+OptDep Bug)
+------------------------------------------------------------------------
+r46 | nevcairiel | 2008-10-09 21:53:54 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/LibSharedMedia-3.0/LibSharedMedia-3.0.lua
+
+WoWAce Post-Processing: Virtually inflate Library Revision numbers for proper upgrade path
+------------------------------------------------------------------------
+r45 | ackis | 2008-10-04 06:04:47 +0000 (Sat, 04 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Fake commit to see if this will be packaged
+------------------------------------------------------------------------
+r44 | root | 2008-09-29 21:29:16 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r42 | root | 2008-09-29 20:58:19 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/LibSharedMedia-3.0
+   A /trunk (from /tmp/trunk/LibSharedMedia-3.0:41)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r41 | StingerSoft | 2008-09-20 09:45:25 +0000 (Sat, 20 Sep 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/LibSharedMedia-3.0/LibSharedMedia-3.0/LibSharedMedia-3.0.lua
+
+LibSharedMedia-3.0
+- added ruRU local
+------------------------------------------------------------------------
