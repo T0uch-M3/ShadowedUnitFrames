@@ -585,6 +585,16 @@ Tags.defaultTags = {
 		if( level < 0 and UnitClassification(unit) == "worldboss" ) then
 			return nil
 		end
+		if( not UnitCanAttack("player", unit) ) then
+			local color = ShadowUF:Hex(GetDifficultyColor(level > 0 and level or 99))
+			if( not color ) then
+				return level > 0 and level or "??"
+			end
+			
+			return color .. (level > 0 and level or "??") .. "|r"
+		else
+			return level
+		end
 		
 		if( UnitCanAttack("player", unit) ) then
 			local color = ShadowUF:Hex(GetDifficultyColor(level > 0 and level or 99))
