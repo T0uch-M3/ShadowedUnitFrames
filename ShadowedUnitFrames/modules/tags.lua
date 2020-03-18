@@ -585,18 +585,9 @@ Tags.defaultTags = {
 		if( level < 0 and UnitClassification(unit) == "worldboss" ) then
 			return nil
 		end
-		if( not UnitCanAttack("player", unit) ) then
-			local color = ShadowUF:Hex(GetDifficultyColor(level > 0 and level or 99))
-			if( not color ) then
-				return level > 0 and level or "??"
-			end
-			
-			return color .. (level > 0 and level or "??") .. "|r"
-		else
-			return level
-		end
 		
-		if( UnitCanAttack("player", unit) ) then
+		
+		if( not UnitCanAttack("player", unit) or UnitCanAttack("player", unit)) then
 			local color = ShadowUF:Hex(GetDifficultyColor(level > 0 and level or 99))
 			if( not color ) then
 				return level > 0 and level or "??"
@@ -728,7 +719,17 @@ Tags.defaultTags = {
 	end]],
 	["shortclassification"] = [[function(unit, unitOwner)
 		local classif = UnitClassification(unit)
-		return classif == "rare" and "R" or classif == "rareelite" and "R+" or classif == "elite" and "+" or classif == "worldboss" and "B"
+		local level = UnitLevel(unit)
+		local colorHolder = classif == "rare" and "R" or classif == "rareelite" and "RE" or classif == "elite" and "E" or classif == "worldboss" and "BOSS" or ""
+		-- return colorHolder
+		
+		if( not UnitCanAttack("player", unit) or UnitCanAttack("player", unit) ) then
+			local color = ShadowUF:Hex(GetDifficultyColor(level > 0 and level or 99))
+			
+			return color .. (tostring(colorHolder)) .. "|r"
+		else
+			return colorHolder
+		end
 	end]],
 	["group"] = [[function(unit, unitOwner)
 		if( GetNumRaidMembers() == 0 ) then return nil end
@@ -970,7 +971,7 @@ Tags.defaultHelp = {
 	["cpoints"]				= L["Total number of combo points you have on your target."],
 	["smartlevel"]			= L["Smart level, returns Boss for bosses, +50 for a level 50 elite mob, or just 80 for a level 80."],
 	["classification"]		= L["Units classification, Rare, Rare Elite, Elite, Boss, nothing is shown if they aren't any of those."],
-	["shortclassification"]	= L["Short classifications, R for Rare, R+ for Rare Elite, + for Elite, B for boss, nothing is shown if they aren't any of those."],
+	["shortclassification"]	= L["Short classifications, R for Rare, RE for Rare Elite, E for Elite, BOSS for boss, nothing is shown if they aren't any of those."],
 	["rare"]				= L["Returns Rare if the unit is a rare or rare elite mob."],
 	["plus"]				= L["Returns + if the unit is an elite or rare elite mob."],
 	["sex"]					= L["Returns the units sex."],
